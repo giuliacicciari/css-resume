@@ -1,0 +1,131 @@
+/* Global Styles */
+body {
+    font-family: 'Bricolage Grotesque', sans-serif; /* professional font */
+    background-color: rgba(255, 255, 224, 1); /* light yellow */
+    color: rgba(0, 0, 139, 0.9); /* dark blue with opacity */
+    line-height: 1.6;
+    margin: 20px;
+    word-spacing: 2px;
+}
+
+/* Background Image */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('background-pattern.png') no-repeat center center;
+    background-size: cover;
+    opacity: 0.05;
+    z-index: -1;
+}
+
+/* Headings */
+h1, h2, h3 {
+    font-weight: 700;
+    color: rgba(0, 0, 139, 0.95);
+    margin-bottom: 10px;
+}
+
+h1 {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+h2 {
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+h3 {
+    color: rgba(0, 0, 139, 0.8);
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+/* Paragraphs */
+p {
+    font-weight: 400;
+    text-indent: 20px;
+    line-height: 1.6;
+    word-spacing: 2px;
+    margin-bottom: 12px;
+    text-transform: none; /* ensures normal capitalization */
+}
+
+/* Pseudo-elements */
+p::first-letter {
+    font-size: 1em; /* normal size */
+    font-weight: normal; /* no bold */
+    color: rgba(0,0,139,0.9); /* subtle color */
+}
+
+p::first-line {
+    text-transform: none; /* keeps first line normal case */
+    letter-spacing: 1px; /* subtle spacing */
+}
+
+/* Links */
+a:link {
+    color: rgba(255,165,0,1);
+    text-decoration: none;
+}
+a:visited {
+    color: rgba(255,165,0,0.8); /* safe visited color */
+}
+a:focus {
+    outline: 2px dashed rgba(0,0,139,0.8);
+    outline-offset: 2px;
+}
+a:hover {
+    text-decoration: underline;
+    color: darkblue;
+}
+a:active {
+    color: red;
+}
+
+/* Lists */
+ul {
+    list-style: none;
+    margin-left: 20px;
+    padding-left: 0;
+}
+
+ul li {
+    background: url('bullet.png') no-repeat 0 4px;
+    background-size: 16px 16px;
+    padding-left: 28px;
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+ul li ul li {
+    background: url('bullet-small.png') no-repeat 0 4px;
+    padding-left: 24px;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Classes & IDs */
+#contact p {
+    letter-spacing: 1px;
+}
+
+.skills-list li {
+    font-style: normal; /* remove italic */
+}
+
+.experience h3 {
+    text-decoration: overline;
+}
